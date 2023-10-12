@@ -33,8 +33,8 @@ function isPalindrom(inputWord) {
     }
     console.log(reverseArray)
     if (wordArray === reverseArray) {
-        return 1
+        return true
     } else {
-        return 0
+        return false
     }
 }
