@@ -1,10 +1,16 @@
 //console.log("ok");
-
+// pari dispari DOM element
 const paliBtnDOMElement = document.getElementById("pali-input-btn");
 console.dir(paliBtnDOMElement);
 const paliTextDOMElement = document.querySelector(".pali-input-text");
 console.dir(paliTextDOMElement);
 
+// pari e dispari DOM element
+const evenOddDOMElement = document.getElementById('even-odd')
+const playBtnDOMElement = document.getElementById('play-btn')
+const numberDOMElement = document.getElementById('input-number')
+
+// verifica parola palindroma
 paliBtnDOMElement.addEventListener("click", function () {
   console.log(paliTextDOMElement.value);
   if (isPalindrom(paliTextDOMElement.value)) {
@@ -13,6 +19,29 @@ paliBtnDOMElement.addEventListener("click", function () {
     alert("la parola non è palindroma");
   }
 });
+
+//pari o dispari?!
+playBtnDOMElement.addEventListener('click', function() {
+    const evenOdd = evenOddDOMElement.value
+    const numberInput = numberDOMElement.value
+    if ((evenOdd === "pari" || evenOdd === "dispari") && (numberInput > 0 && numberInput < 6)) {
+        console.log('dato valido')
+        const cpuGenNumber = Math.floor(Math.random() * 5) + 1
+        console.log(cpuGenNumber)
+        if ((isSumEven(numberInput, cpuGenNumber)) && evenOdd === "pari") {
+            alert('hai vinto!')
+        } else if ((isSumEven(numberInput, cpuGenNumber) === false) && (evenOdd === "dispari")) {
+            alert('hai vinto')
+        } else {
+            alert('hai perso')
+        }
+            
+        
+    } else {
+        alert('dato inserito non valido')
+    }
+    
+})
 
 // funzione verifica parola palindroma
 function isPalindrom(inputWord) {
@@ -44,4 +73,15 @@ function arrayEquals(arr1, arr2) {
     }
     return uguali;
   }
+}
+
+// funzione isEven
+
+function isSumEven(num1, num2) {
+    let sum = num1 + num2
+    if ((sum % 2) === 0) {
+        return true
+    } else {
+        return false
+    }
 }
