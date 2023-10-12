@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.pali-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.palindroma {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.pali-input {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pali-input p {
+    font-size: 20px;
+    text-transform: uppercase;
+}
