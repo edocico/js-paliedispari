@@ -102,3 +102,9 @@ function isPalindrome2(parola) {
         return false
     }
 }
+
+// metodo split('') taglia una stringa e ne ricavi un array , se --> ('(spazio)') spezzeta frasi in base agli spazi
+
+// metodo reverse() --> metodo degli array ribalta l'ordine degli elementi degli array
+// metodo join('') --> uniscce tutti gli elementi di un array
+// metodo split('') e metodo join('') sono uno l'opposto dell'altro
