@@ -123,3 +123,5 @@ function isPalindrome2(parola) {
 // dicitura (!isEven()) = se la funzione ritorna false
 
 // gridElement = '' --> svuota l'elemento prima riempito
+
+// this --> riferisce la funzione all'elemento sul quale l'evento è stato evocato
