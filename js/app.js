@@ -45,7 +45,7 @@ playBtnDOMElement.addEventListener('click', function() {
 
 // funzione verifica parola palindroma
 function isPalindrom(inputWord) {
-  
+  inputWord = inputWord.toLowerCase()
   let reverseArray = [];
   const wordArray = Array.from(inputWord);
   console.log(wordArray);
