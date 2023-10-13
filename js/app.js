@@ -85,3 +85,20 @@ function isSumEven(num1, num2) {
         return false
     }
 }
+
+// funzione ispalindrome2 //correzione
+
+function isPalindrome2(parola) {
+    parola = parola.toLowerCase()
+    let parolaRovesciata = ''
+    for (let i = parola.length - 1; i >= 0; i--) {
+        const char = parola.charAt(i)
+        parolaRovesciata += char
+    }
+
+    if (parola === parolaRovesciata) {
+        return true
+    } else {
+        return false
+    }
+}
