@@ -22,7 +22,7 @@ paliBtnDOMElement.addEventListener("click", function () {
 
 //pari o dispari?!
 playBtnDOMElement.addEventListener('click', function() {
-    const evenOdd = evenOddDOMElement.value
+    const evenOdd = evenOddDOMElement.value.toLowerCase()
     const numberInput = numberDOMElement.value
     if ((evenOdd === "pari" || evenOdd === "dispari") && (numberInput > 0 && numberInput < 6)) {
         console.log('dato valido')
@@ -30,7 +30,7 @@ playBtnDOMElement.addEventListener('click', function() {
         console.log(cpuGenNumber)
         if ((isSumEven(numberInput, cpuGenNumber)) && evenOdd === "pari") {
             alert('hai vinto!')
-        } else if ((isSumOdd(numberInput, cpuGenNumber)) && (evenOdd === "dispari")) {
+        } else if (isSumOdd(numberInput, cpuGenNumber) && evenOdd === "dispari") {
             alert('hai vinto')
         } else {
             alert('hai perso')
@@ -119,3 +119,5 @@ function isPalindrome2(parola) {
 // metodo reverse() --> metodo degli array ribalta l'ordine degli elementi degli array
 // metodo join('') --> uniscce tutti gli elementi di un array
 // metodo split('') e metodo join('') sono uno l'opposto dell'altro
+
+// dicitura (!isEven()) = se la funzione ritorna false
