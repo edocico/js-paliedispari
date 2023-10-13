@@ -121,3 +121,5 @@ function isPalindrome2(parola) {
 // metodo split('') e metodo join('') sono uno l'opposto dell'altro
 
 // dicitura (!isEven()) = se la funzione ritorna false
+
+// gridElement = '' --> svuota l'elemento prima riempito
