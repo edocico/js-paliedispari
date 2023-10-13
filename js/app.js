@@ -30,7 +30,7 @@ playBtnDOMElement.addEventListener('click', function() {
         console.log(cpuGenNumber)
         if ((isSumEven(numberInput, cpuGenNumber)) && evenOdd === "pari") {
             alert('hai vinto!')
-        } else if ((isSumEven(numberInput, cpuGenNumber) === false) && (evenOdd === "dispari")) {
+        } else if ((isSumOdd(numberInput, cpuGenNumber)) && (evenOdd === "dispari")) {
             alert('hai vinto')
         } else {
             alert('hai perso')
@@ -80,6 +80,17 @@ function arrayEquals(arr1, arr2) {
 function isSumEven(num1, num2) {
     let sum = num1 + num2
     if ((sum % 2) === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// funzione isOdd
+
+function isSumOdd(num1, num2) {
+    let sum = num1 + num2
+    if ((sum % 2) !== 0) {
         return true
     } else {
         return false
